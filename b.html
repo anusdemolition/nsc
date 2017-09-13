@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="angb.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body ng-app="nsApp">
+  <div ng-controller="controllerIndex">
+    <center>
+      <div ng-show="showVideo">
+        <br><b>Few videos cannot be hacked by the system.</b><br> If you see an error, that could be it - or wrong IMG was inserted. <b>Let the video load</b>.
+
+        <br><br>
+        <video controls="" src="{{videoLink | trustUrl}}">
+    </video>
+        <noscript>Your browser does not support JavaScript, the video may not work!</noscript>
+
+        <br><b><font size="5">Download Video: <a href="{{videoLink}}" download="video.mp4">Click Here</a> </font></b>
+      </div>
+      <form class="navbar-form navbar-left" nosubmit="">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="input" ng-model="bLink">
+        </div>
+        <button type="button" class="btn btn-primary" id="btnAdd" ng-click="getVideo()">Get</button>
+      </form>
+      <br>
+      <p>
+
+      <br>
+    </center>
+  </div>
+</body>
+
+</html>
