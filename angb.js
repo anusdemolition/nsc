@@ -1,4 +1,4 @@
-var app = angular.module('nsApp', []);
+var app = angular.module('bApp', []);
 
 app.filter("trustUrl", ['$sce', function($sce) {
   return function(recordingUrl) {
@@ -6,7 +6,7 @@ app.filter("trustUrl", ['$sce', function($sce) {
   };
 }]);
 
-app.controller('controllerIndex', function($scope) {
+app.controller('controllerB', function($scope) {
   $scope.videoLink = null;
   $scope.showVideo = false;
 
